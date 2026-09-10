@@ -1,6 +1,6 @@
 {
-  "name": "Otávio Monteiro Preparador",
-  "description": "Site profissional de preparação física e performance individual e familiar. Treinamento inteligente para evolução segura e consistente.",
+  "name": "Team Monteiro Consultoria",
+  "description": "Consultoria esportiva de alta performance e preparação física personalizada sob a liderança do Team Monteiro.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

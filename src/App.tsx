@@ -18,7 +18,7 @@ import { Footer } from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white font-sans selection:bg-emerald-500 selection:text-slate-950">
+    <div className="min-h-screen bg-brand-black text-brand-ice font-sans selection:bg-brand-red selection:text-brand-ice">
       <Header />
       <main>
         <Hero />

@@ -2,18 +2,18 @@ import { motion } from "motion/react";
 
 export function SocialProof() {
   return (
-    <section className="py-24 bg-slate-900">
+    <section className="py-24 bg-brand-black">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-5xl font-black text-white mb-4"
+            className="text-3xl md:text-6xl font-black text-brand-ice mb-4 tracking-tighter uppercase"
           >
             Autoridade & Resultados
           </motion.h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-400 text-lg max-w-2xl mx-auto font-medium">
             Histórias de quem transformou sua relação com o corpo e alcançou novos patamares de performance.
           </p>
         </div>
@@ -26,17 +26,17 @@ export function SocialProof() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="p-8 bg-slate-800/30 border border-slate-800 rounded-3xl relative overflow-hidden italic text-slate-400"
+              className="p-10 bg-brand-gray/10 border border-brand-gray rounded-[2.5rem] relative overflow-hidden italic text-slate-400"
             >
-              <div className="absolute top-4 right-8 text-emerald-500/20 text-8xl font-serif">“</div>
-              <p className="relative z-10 mb-8 leading-relaxed">
+              <div className="absolute top-4 right-10 text-brand-red/10 text-9xl font-black tracking-tighter select-none">“</div>
+              <p className="relative z-10 mb-8 leading-relaxed font-medium">
                 [INSERIR DEPOIMENTO AUTORIZADO - AGUARDANDO VALIDAÇÃO DO PROFISSIONAL PARA GARANTIR ÉTICA E VERACIDADE]
               </p>
-              <div className="flex items-center gap-4 mt-auto">
-                <div className="w-12 h-12 rounded-full bg-slate-700 animate-pulse" />
+              <div className="flex items-center gap-4 mt-auto not-italic">
+                <div className="w-12 h-12 rounded-full bg-brand-gray/30 border border-brand-gray shrink-0" />
                 <div>
-                  <p className="text-white font-bold text-sm">[NOME DO ALUNO]</p>
-                  <p className="text-slate-500 text-xs">[META ALCANÇADA]</p>
+                  <p className="text-brand-ice font-black text-xs uppercase tracking-widest">[NOME DO ALUNO]</p>
+                  <p className="text-brand-orange text-[10px] font-black uppercase tracking-widest">[META ALCANÇADA]</p>
                 </div>
               </div>
             </motion.div>
@@ -45,8 +45,8 @@ export function SocialProof() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
            {[1, 2, 3, 4].map((i) => (
-             <div key={i} className="aspect-square bg-slate-800/50 rounded-2xl flex items-center justify-center border border-slate-800 overflow-hidden group">
-                <p className="text-slate-600 text-[10px] text-center px-4 uppercase font-black group-hover:text-emerald-500 transition-colors">
+             <div key={i} className="aspect-square bg-brand-gray/20 rounded-[2rem] flex items-center justify-center border border-brand-gray overflow-hidden group hover:border-brand-red transition-all cursor-pointer">
+                <p className="text-brand-gray text-[10px] text-center px-6 uppercase font-black group-hover:text-brand-orange transition-colors tracking-widest">
                   [INSERIR FOTO DE TREINO / RESULTADO AUTORIZADO]
                 </p>
              </div>

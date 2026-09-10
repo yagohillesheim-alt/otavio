@@ -103,10 +103,10 @@ export function Quiz() {
                 </div>
 
                 <div className="flex items-center justify-between mb-8">
-                  <span className="text-emerald-500 font-bold uppercase tracking-widest text-sm">Passo {currentStep + 1} de {QUESTIONS.length}</span>
+                  <span className="text-brand-orange font-black uppercase tracking-[0.3em] text-[10px]">Passo {currentStep + 1} de {QUESTIONS.length}</span>
                   {currentStep > 0 && (
-                    <button onClick={handleBack} className="flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm font-bold">
-                      <ArrowLeft size={16} /> Voltar
+                    <button onClick={handleBack} className="flex items-center gap-2 text-slate-500 hover:text-brand-ice transition-colors text-[10px] font-black uppercase tracking-widest">
+                      <ArrowLeft size={14} /> Voltar
                     </button>
                   )}
                 </div>
@@ -119,7 +119,7 @@ export function Quiz() {
                     exit={{ opacity: 0, x: -20 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <h3 className="text-2xl md:text-3xl font-black text-white mb-10 leading-tight">
+                    <h3 className="text-2xl md:text-4xl font-black text-brand-ice mb-12 leading-none uppercase tracking-tighter">
                       {QUESTIONS[currentStep].question}
                     </h3>
 
@@ -128,10 +128,10 @@ export function Quiz() {
                         <button
                           key={option}
                           onClick={() => handleSelect(option)}
-                          className="flex items-center justify-between p-6 rounded-2xl bg-slate-700/50 border border-slate-600 text-white font-bold hover:border-emerald-500 hover:bg-slate-700 transition-all text-left group"
+                          className="flex items-center justify-between p-6 rounded-2xl bg-brand-gray/5 border border-brand-gray/20 text-brand-ice font-black uppercase tracking-wider text-sm hover:border-brand-red hover:bg-brand-red/10 transition-all text-left group shadow-lg"
                         >
                           {option}
-                          <ChevronRight size={20} className="text-slate-500 group-hover:text-emerald-500 transition-colors" />
+                          <ChevronRight size={20} className="text-brand-gray group-hover:text-brand-red transition-colors" />
                         </button>
                       ))}
                     </div>
@@ -144,34 +144,34 @@ export function Quiz() {
                 animate={{ opacity: 1, scale: 1 }}
                 className="text-center py-10"
               >
-                <div className="w-20 h-20 bg-emerald-500 rounded-full flex items-center justify-center mx-auto mb-8 text-slate-950 shadow-xl shadow-emerald-500/20">
-                  <Send size={40} />
+                <div className="w-24 h-24 bg-brand-red rounded-full flex items-center justify-center mx-auto mb-10 text-brand-ice shadow-2xl shadow-brand-red/30">
+                  <Send size={44} />
                 </div>
-                <h3 className="text-3xl font-black text-white mb-6">Excelente!</h3>
-                <p className="text-slate-400 text-lg mb-10 max-w-lg mx-auto">
+                <h3 className="text-4xl font-black text-brand-ice mb-6 uppercase tracking-tighter leading-none">Excelente!</h3>
+                <p className="text-slate-400 text-lg mb-12 max-w-lg mx-auto font-medium">
                   Suas respostas ajudam a iniciar a conversa. O plano ideal depende de uma avaliação individual.
                 </p>
 
-                <div className="bg-slate-900/50 p-6 rounded-2xl border border-slate-700 mb-10 text-left">
-                  <p className="text-xs font-bold text-emerald-500 uppercase mb-4 tracking-widest">Resumo das suas metas:</p>
-                  <ul className="space-y-2">
+                <div className="bg-brand-black/50 p-8 rounded-3xl border border-brand-gray/20 mb-12 text-left shadow-2xl">
+                  <p className="text-[10px] font-black text-brand-orange uppercase mb-6 tracking-[0.4em]">Resumo das suas metas:</p>
+                  <ul className="space-y-3">
                     {answers.map((ans, i) => (
-                      <li key={i} className="text-slate-300 text-sm flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                      <li key={i} className="text-brand-ice text-xs font-black uppercase tracking-widest flex items-center gap-3">
+                        <div className="w-2 h-2 rounded-full bg-brand-red" />
                         {ans}
                       </li>
                     ))}
                   </ul>
                 </div>
 
-                <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
                   <a
                     href={`https://wa.me/${CONTENT.profile.whatsapp}?text=Olá Otávio! Fiz o quiz no site e gostaria de conversar sobre meu acompanhamento. Meus objetivos: ${answers.join(", ")}`}
-                    className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-400 text-slate-950 px-10 py-5 rounded-2xl font-black text-xl flex items-center justify-center gap-2 transition-all shadow-xl shadow-emerald-500/20"
+                    className="w-full sm:w-auto bg-brand-red hover:bg-brand-orange text-brand-ice px-12 py-6 rounded-2xl font-black text-xl uppercase tracking-widest flex items-center justify-center gap-3 transition-all shadow-2xl shadow-brand-red/30"
                   >
                     Falar com Otávio
                   </a>
-                  <button onClick={resetQuiz} className="text-slate-400 hover:text-white font-bold transition-colors">
+                  <button onClick={resetQuiz} className="text-slate-500 hover:text-brand-ice font-black uppercase tracking-widest text-xs transition-colors">
                     Refazer Quiz
                   </button>
                 </div>
